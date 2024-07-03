@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "10-fs-sync.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
@@ -11,5 +12,8 @@
   "description": "",
   "dependencies": {
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }
