@@ -8,3 +8,4 @@
 4. Jobs-API Project
 5. Store API Project
 6. Task Manager
+7. JWT Basics
