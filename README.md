@@ -7,3 +7,4 @@
 3. Mini Projects
 4. Jobs-API Project
 5. Store API Project
+6. Task Manager
