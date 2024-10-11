@@ -5,8 +5,8 @@
 1. Node Fundamentals
 2. Express.js
 3. Mini Projects
-4. Jobs-API Project
-5. Store API Project
-6. Task Manager
-7. JWT Basics
-8. Jobs Star
+   - Jobs-API Project
+   - Store API Project
+4. Task Manager
+5. JWT Basics
+6. Jobs Star
