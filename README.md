@@ -9,3 +9,4 @@
 5. Store API Project
 6. Task Manager
 7. JWT Basics
+8. Jobs Star
