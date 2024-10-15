@@ -28,4 +28,4 @@ const uploadProductImage = async (req, res) => {
     const result = await cloudinary.uploader.upload()
 }
 
-module.exports = { uploadProductImageLocal, uploadProductImage }
+module.exports = { uploadProductImage }
