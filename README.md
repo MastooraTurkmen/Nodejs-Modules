@@ -10,3 +10,4 @@
    - Task Manager
    - JWT Basics
    - Jobs Star
+   - Upload File
