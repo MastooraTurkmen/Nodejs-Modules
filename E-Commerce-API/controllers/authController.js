@@ -22,6 +22,8 @@ const register = async (req, res) => {
 }
 
 const login = async (req, res) => {
+    const { email, name, password } = req.body;
+
     res.send('User login')
 }
 
