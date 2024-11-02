@@ -3,11 +3,15 @@ require('express-async-errors')
 
 const express = require('express')
 const app = express()
+
 const morgon = require('morgan')
-const authRoutes = require('./routes/authRoutes')
+const cookieParser = require('cookie-parser')
+const cors = require('cors')
 
 // database
 const connectDB = require('./db/connect')
+
+const authRouter = require('./')
 
 // middleware
 const notFoundMiddleware = require('./middleware/not-found')
