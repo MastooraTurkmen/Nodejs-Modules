@@ -11,7 +11,7 @@ const cors = require('cors')
 // database
 const connectDB = require('./db/connect')
 
-const authRouter = require('./')
+const authRouter = require('./routes/authRoutes')
 
 // middleware
 const notFoundMiddleware = require('./middleware/not-found')
