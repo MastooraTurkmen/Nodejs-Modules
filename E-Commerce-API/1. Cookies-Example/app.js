@@ -10,8 +10,6 @@ const cookieParser = require('cookie-parser')
 // database
 const connectDB = require('./db/connect')
 
-const authRouter = require('./routes/authRoutes')
-
 // middleware
 const notFoundMiddleware = require('./middleware/not-found')
 const errorHandlerMiddleware = require('./middleware/error-handler')
