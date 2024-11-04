@@ -6,7 +6,6 @@ const app = express()
 
 const morgon = require('morgan')
 const cookieParser = require('cookie-parser')
-const cors = require('cors')
 
 // database
 const connectDB = require('./db/connect')
