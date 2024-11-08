@@ -23,12 +23,32 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
     const { email, name, password } = req.body;
+    if (!email || !password) {
+        throw new CustomError.BadRequestError('Please provide email and password')
+    }
 
-    res.send('User login')
+    const user = await User.findOne({ email })
+
+    if (!user) {
+        throw new CustomError.UnauthenticatedError('Invalid Crendentials')
+    }
+
+    const isPasswordCorrect = await user.comparePassword(password);
+
+    if (!isPasswordCorrect) {
+        throw new CustomError.UnauthenticatedError('Invalid Crendentials')
+    }
+
+    const token = user.createJWT()
+    res.status(StatusCodes.OK).json({ user: { name: user.name }, token })
 }
 
 const logout = async (req, res) => {
-    res.send('User logout')
+    res.cookie('token', 'logout', {
+        httpOnly: true,
+        expires: new Date(Date.now() + 5 * 1000),
+    })
+    res.status(StatusCodes.OK).json({ msg: 'user logged out!' })
 }
 
 
