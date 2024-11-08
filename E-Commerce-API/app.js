@@ -17,17 +17,18 @@ const errorHandlerMiddleware = require('./middleware/error-handler')
 
 app.use(express.json())
 app.use(morgon('tiny'))
-app.use(cookiesParser())
-app.use('/api/v1/auth', authRoutes)
+app.use(cookiesParser(process.env.JWT_SECRET))
 
 app.get('/', (req, res) => {
     res.send('e commerce api')
 })
 
 app.get('/api/v1', (req, res) => {
+    console.log(req.signedCookies);
     res.send('e commerce api')
 })
 
+app.use('/api/v1/auth', authRoutes)
 app.use(notFoundMiddleware)
 app.use(errorHandlerMiddleware)
 
