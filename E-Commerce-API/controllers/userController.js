@@ -1,4 +1,4 @@
-const getAllUser = async (req, res) => {
+const getAllUsers = async (req, res) => {
     res.send('get all users route')
 }
 
@@ -18,5 +18,5 @@ const updateUserPassword = async (req, res) => {
 }
 
 module.exports = {
-    getAllUser, getSingleUser, updateUser, updateUserPassword, showCurrentUser
+    getAllUsers, getSingleUser, updateUser, updateUserPassword, showCurrentUser
 }
