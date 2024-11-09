@@ -6,7 +6,10 @@ const app = express()
 
 const morgon = require('morgan')
 const cookiesParser = require('cookie-parser')
+
+// router
 const authRoutes = require('./routes/authRoutes')
+const userRoutes = require('./routes/userRoute')
 
 // database
 const connectDB = require('./db/connect')
@@ -29,6 +32,9 @@ app.get('/api/v1', (req, res) => {
 })
 
 app.use('/api/v1/auth', authRoutes)
+app.use('/api/v1/users', userRoutes)
+
+
 app.use(notFoundMiddleware)
 app.use(errorHandlerMiddleware)
 
