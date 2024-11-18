@@ -6,6 +6,7 @@ const app = express()
 
 const morgon = require('morgan')
 const cookiesParser = require('cookie-parser')
+const fileUpload = require('express-fileupload')
 
 // router
 const authRoutes = require('./routes/authRoutes')
@@ -22,6 +23,8 @@ const errorHandlerMiddleware = require('./middleware/error-handler')
 app.use(express.json())
 app.use(morgon('tiny'))
 app.use(cookiesParser(process.env.JWT_SECRET))
+app.use(express.static('./public'))
+app.use(fileUpload())
 
 app.get('/', (req, res) => {
     res.send('e commerce api')
