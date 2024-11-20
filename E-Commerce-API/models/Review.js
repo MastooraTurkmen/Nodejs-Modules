@@ -36,11 +36,11 @@ ReviewSchema.statics.calculateAverageRating = async function (productId) {
 }
 
 ReviewSchema.post('save', async function () {
-    console.log('post save hook called');
+    await this.contructor.calculateAverageRating(this.product)
 })
 
 ReviewSchema.post('remove', async function () {
-    console.log('post save hook called');
+    await this.contructor.calculateAverageRating(this.product)
 })
 
 
