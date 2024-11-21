@@ -13,6 +13,7 @@ const authRoutes = require('./routes/authRoutes')
 const userRoutes = require('./routes/userRoute')
 const productRouter = require('./routes/productRoutes')
 const reviewRouter = require('./routes/reviewRoutes')
+const orderRouter = require('./routes/orderRoute')
 
 // database
 const connectDB = require('./db/connect')
@@ -40,6 +41,7 @@ app.use('/api/v1/auth', authRoutes)
 app.use('/api/v1/users', userRoutes)
 app.use('/api/v1/products', productRouter)
 app.use('/api/v1/reviews', reviewRouter)
+app.use('/api/v1/orders', orderRouter)
 
 
 app.use(notFoundMiddleware)
